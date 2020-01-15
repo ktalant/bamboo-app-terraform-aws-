@@ -1,3 +1,7 @@
 provider "aws" {
-  region                = "us-east-1"
+  region                = var.aws_region
+}
+
+module "bamboo-storage" {
+  source = "./modules/s3"
 }
